@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - PARTH</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <style>
+    /* Base Reset */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #c9d1d9;
+      overflow-x: hidden;
+      line-height: 1.6;
+      position: relative;
+      background: transparent; /* Let ::before handle the animation */
+    }
+
+    /* Animated Gradient Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: linear-gradient(-45deg, #2b0057, #12003b, #43007e, #0a001a);
+      background-size: 400% 400%;
+      animation: vividGradient 15s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes vividGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 10px #c77dff;
+      backdrop-filter: blur(6px);
+    }
+
+    .navbar h2 {
+      font-size: 1.8rem;
+      color: #fff;
+      text-shadow: 0 0 5px #c77dff, 0 0 10px #c77dff;
+      margin: 0;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .navbar nav a {
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav a:hover {
+      color: #c77dff;
+    }
+
+    .navbar nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #c77dff;
+      box-shadow: 0 0 10px #c77dff;
+      transition: width 0.3s ease;
+    }
+
+    .navbar nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Heading */
+    .about-heading {
+      font-size: 3rem;
+      margin: 2rem 2rem 1rem;
+      text-align: left;
+      color: #fff;
+      text-shadow: 0 0 10px #c77dff, 0 0 20px #c77dff;
+    }
+
+    /* Profile Image */
+    .profile-photo {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .profile-photo img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 25px #c77dff, 0 0 50px #8a2be2;
+    }
+
+    /* Typing Quote */
+    .quote {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 1.5rem auto 1rem;
+      max-width: 80%;
+      color: #ffe6ff;
+      font-style: italic;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typingLoop 8s steps(40, end) infinite, blink 0.8s step-end infinite;
+    }
+
+    @keyframes typingLoop {
+      0% { width: 0; }
+      40% { width: 100%; }
+      60% { width: 100%; }
+      100% { width: 0; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* About Text */
+    .about-text {
+      max-width: 800px;
+      margin: 2rem auto;
+      line-height: 1.8;
+      padding: 0 2rem;
+      font-size: 1.1rem;
+      white-space: pre-line;
+    }
+
+    /* Footer */
+    footer.footer {
+      background-color: rgba(255, 255, 255, 0.05);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      box-shadow: 0 -2px 10px #c77dff;
+      margin-top: 3rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .social-icons {
+      margin-top: 0.5rem;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ffe6ff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h2>PARTH</h2>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ABOUT ME Heading -->
+  <h1 class="about-heading">ABOUT ME</h1>
+
+  <!-- Profile Photo -->
+  <div class="profile-photo">
+    <img src="parth.jpg" alt="Parth" />
+  </div>
+
+  <!-- Quote -->
+  <div class="quote">“Wisdom begins where the need to prove ends.”</div>
+
+  <!-- About Text -->
+  <div class="about-text">
+    <p>Hello! I'm Parth, an aspiring AI and Data Science enthusiast currently pursuing a B.Tech degree.</p>
+
+    <p>I have a passion for creating practical projects using simple tools and learning by doing. I'm especially focused on building my portfolio through hands-on web projects — like this site you're viewing now, created entirely on a phone!</p>
+
+    <p>My goal is to become a skilled ML/AI engineer who can solve real-world problems while maintaining a healthy life balance. I'm committed to continuous learning, embracing curiosity, and sharing knowledge with others.</p>
+
+    <p>When I’m not coding, I explore martial arts philosophy, minimalist design ideas, and occasionally dream of building a terminator someday.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="zoom-in">
+    <p>&copy; 2025 Parth Chauhan. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="mailto:parthchauhan0690@gmail.com" target="_blank" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/Patu-PSC" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/parth-chauhan-434437334" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

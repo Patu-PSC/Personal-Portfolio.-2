@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+
+  <div class="calculator-container">
+    <h2 class="section-heading">🧮 Simple Calculator</h2>
+    <input type="text" id="display" class="display" readonly>
+
+    <div class="buttons">
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('/')">÷</button>
+
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('*')">×</button>
+
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('-')">−</button>
+
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="appendValue('+')">+</button>
+
+      <button onclick="clearDisplay()" class="clear-btn">C</button>
+      <button onclick="deleteLast()" class="delete-btn">⌫</button>
+    </div>
+
+    <button onclick="toggleSound()" class="toggle-sound-btn">🔈 Toggle Sound</button>
+
+    <div id="history">
+      <strong>History:</strong>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+
+<footer class="footer" data-aos="zoom-in">
+  <div class="footer-links">
+    
+  </div>
+
+  <p>&copy; 2025 Parth Chauhan. All rights reserved.</p>
+
+  <div class="social-icons">
+    <a href="mailto:parthchauhan0690@gmail.com" target="_blank" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://github.com/Patu-PSC" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/parth-chauhan-434437334" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</footer>
+<audio id="buttonSound" src="M.mp3" preload="auto"></audio>
+<script src="script.js"></script>
+
+</body>
+</html>
